@@ -1,0 +1,22 @@
+<section class="container">
+  <div *ngIf="aiForm.loading()">
+    <p>Carregando campo de IA...</p>
+  </div>
+  
+  <div *ngIf="!aiForm.loading() && aiForm.error() && !aiForm.config()">
+    <p style="color: red;">{{ aiForm.error() }}</p>
+  </div>
+  
+  <div *ngIf="aiForm.config() as config">
+  
+    <label>{{ config.placeholder }}</label>
+  
+    <input [type]="config.type" [placeholder]="config.placeholder" [value]="aiForm.value()" (input)="onInput($event)"
+      (blur)="onBlur()" />
+  
+    <div *ngIf="aiForm.error()" style="color: red; font-size: 0.9em;">
+      {{ aiForm.error() }}
+    </div>
+  
+  </div>
+</section>
