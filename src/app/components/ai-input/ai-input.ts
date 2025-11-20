@@ -1,11 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AiFormService, FormAIOptions } from '@ejunior95/formai-angular';
+import { IMaskModule } from 'angular-imask';
 
 @Component({
   selector: 'app-ai-input',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    IMaskModule
+  ],
   providers: [AiFormService],
   templateUrl: './ai-input.html',
 })

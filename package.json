@@ -28,6 +28,8 @@
     "@angular/router": "^20.1.0",
     "@ejunior95/formai-angular": "^0.1.1",
     "@ejunior95/formai-core": "^0.1.1",
+    "angular-imask": "^7.6.1",
+    "imask": "^7.6.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

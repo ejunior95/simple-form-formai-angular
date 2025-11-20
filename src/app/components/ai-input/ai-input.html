@@ -11,8 +11,16 @@
   
     <label>{{ config.placeholder }}</label>
   
-    <input [type]="config.type" [placeholder]="config.placeholder" [value]="aiForm.value()" (input)="onInput($event)"
-      (blur)="onBlur()" />
+    <input 
+      [type]="config.type" 
+      
+      [imask]="config.mask ? { mask: config.mask } : undefined"
+      
+      [placeholder]="config.placeholder" 
+      [value]="aiForm.value()" 
+      (input)="onInput($event)"
+      (blur)="onBlur()" 
+    />
   
     <div *ngIf="aiForm.error()" style="color: red; font-size: 0.9em;">
       {{ aiForm.error() }}
